@@ -1,0 +1,9 @@
+{
+    "name": "tglogin",
+    "type": "module",
+    "version": "0.0.1",
+    "bin": "./bin.js",
+    "dependencies": {
+        "telegram": "^2.20.15"
+    }
+}
