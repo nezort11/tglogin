@@ -1,9 +1,10 @@
 {
-    "name": "tglogin",
-    "type": "module",
-    "version": "0.0.1",
-    "bin": "./bin.js",
-    "dependencies": {
-        "telegram": "^2.20.15"
-    }
+  "name": "tglogin",
+  "type": "module",
+  "version": "0.0.1",
+  "bin": "./bin.js",
+  "dependencies": {
+    "read": "^3.0.1",
+    "telegram": "^2.20.15"
+  }
 }
