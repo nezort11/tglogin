@@ -11,7 +11,8 @@ const main = async () => {
   });
 
   const apiHash = await read({
-    prompt: "⚙️  Please enter API hash (got from https://my.telegram.org): ",
+    prompt:
+      "⚙️  Please enter API hash (got from https://my.telegram.org): ",
     silent: true,
     replace: "*",
   });
@@ -44,4 +45,16 @@ const main = async () => {
   process.exit(0);
 };
 
-main();
+const main_ = async () => {
+  try {
+    await main();
+  } catch (error) {
+    // gracefully handle "canceled" exception from read package
+    if (error.message === "canceled") {
+      return;
+    }
+    throw error;
+  }
+};
+
+main_();
